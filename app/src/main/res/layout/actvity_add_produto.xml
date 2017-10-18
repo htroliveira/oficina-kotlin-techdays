@@ -2,23 +2,23 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="@dimen/padding_default">
 
     <EditText
         android:id="@+id/etNome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nome" />
+        android:hint="@string/name" />
 
     <TextView
         android:id="@+id/tvDinheiro"
-        android:textSize="20sp"
+        android:textSize="@dimen/size_medium_large"
         android:layout_below="@id/etNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:text="R$" />
+        android:text="@string/money_symbol" />
 
     <EditText
         android:id="@+id/etPreco"
@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/etNome"
         android:layout_toRightOf="@id/tvDinheiro"
-        android:hint="0.00"
+        android:hint="@string/hint_zero"
         android:layout_alignBaseline="@id/tvDinheiro"
         android:inputType="numberDecimal" />
 
@@ -35,5 +35,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/etPreco"
-        android:text="Salvar" />
+        android:text="@string/save" />
 </RelativeLayout>
