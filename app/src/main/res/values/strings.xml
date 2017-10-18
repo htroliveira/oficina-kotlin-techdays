@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">KGarconBagual</string>
+    <string name="btn_finalizar">Finalizar</string>
+    <string name="add_produto">Adicionar Produto</string>
+</resources>

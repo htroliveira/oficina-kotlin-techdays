@@ -1,0 +1,5 @@
+CREATE TABLE PRODUTO(
+    _id INTEGER PRIMARY KEY autoincrement ,
+    NOME varchar(255) NOT null ,
+    PRECO DECIMAL NOT NULL
+)

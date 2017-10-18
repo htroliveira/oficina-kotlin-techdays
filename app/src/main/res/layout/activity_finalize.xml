@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvTroco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="end|right"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnCalcTroco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tvTroco"
+        android:text="calcular troco" />
+
+    <TextView
+        android:id="@+id/tvDinheiroLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnCalcTroco"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Dinheiro: R$"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/etDinheiro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnCalcTroco"
+        android:layout_alignBaseline="@id/tvDinheiroLabel"
+        android:layout_toEndOf="@id/tvDinheiroLabel"
+        android:layout_toRightOf="@id/tvDinheiroLabel"
+        android:inputType="numberDecimal"/>
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tvDinheiroLabel"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+    <ListView
+        android:id="@+id/lvProdutos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tvTotal"/>
+</RelativeLayout>
