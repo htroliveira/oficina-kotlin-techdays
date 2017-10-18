@@ -4,6 +4,6 @@
     <item
         android:id="@+id/addProduto_mi"
         android:icon="@drawable/ic_add"
-        android:title="@string/add_produto"
+        android:title="@string/add_product"
         app:showAsAction="always" />
 </menu>

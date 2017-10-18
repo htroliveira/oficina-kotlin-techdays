@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:padding="@dimen/padding_default"
     tools:context="com.hgianastasio.kgarconbagual.view.MainActivity">
 
     <Button
         android:id="@+id/btnFinalizar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_finalizar"
+        android:text="@string/btn_finish"
         android:layout_alignParentBottom="true"/>
     <ListView
         android:id="@+id/lvProdutos"
