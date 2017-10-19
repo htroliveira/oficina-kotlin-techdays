@@ -7,7 +7,6 @@ import android.widget.Toast
 import com.hgianastasio.kgarconbagual.R
 import com.hgianastasio.kgarconbagual.data.dao.ProdutoDAO
 import com.hgianastasio.kgarconbagual.data.database.DBHelper
-import com.hgianastasio.kgarconbagual.data.models.Produto
 import kotlinx.android.synthetic.main.activity_finalize.*
 
 /**
@@ -40,7 +39,7 @@ class FinalizeActivity : AppCompatActivity() {
         tvTotal.text = "R$${total.format(2)}"
         btnCalcTroco.setOnClickListener{
             if(!etDinheiro.text.isEmpty()) {
-                val dinheiro = etDinheiro.text.toString().toDouble();
+                val dinheiro = etDinheiro.text.toString().toDouble()
                 if (dinheiro < total)
                     Toast.makeText(this, "O dinheiro não é suficiente", Toast.LENGTH_SHORT).show()
                 else
