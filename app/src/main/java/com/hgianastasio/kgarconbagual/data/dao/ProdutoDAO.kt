@@ -6,7 +6,7 @@ import com.hgianastasio.kgarconbagual.data.database.DBHelper
 import com.hgianastasio.kgarconbagual.data.database.getDouble
 import com.hgianastasio.kgarconbagual.data.database.getLong
 import com.hgianastasio.kgarconbagual.data.database.getString
-import com.hgianastasio.kgarconbagual.data.models.Produto
+import com.hgianastasio.kgarconbagual.model.Product
 import java.sql.SQLException
 
 /**
@@ -14,7 +14,7 @@ import java.sql.SQLException
  */
 class ProdutoDAO(val dbHelper: DBHelper) {
 
-    fun save(produto: Produto): Long{
+    fun save(produto: Product): Long{
         val db = dbHelper.writableDatabase
         return try {
             db.insertOrThrow(PRODUTO_TABLE_NAME,null,produto.toContentValues())
@@ -24,10 +24,10 @@ class ProdutoDAO(val dbHelper: DBHelper) {
     }
 
 
-    fun getAll():List<Produto>{
+    fun getAll():List<Product>{
         val db = dbHelper.readableDatabase
         val cursor = db.query(PRODUTO_TABLE_NAME, arrayOf(PRODUTO_ID_COLUMN, PRODUTO_NOME_COLUMN, PRODUTO_PRECO_COLUMN),null,null,null,null,null)
-        val result = mutableListOf<Produto>()
+        val result = mutableListOf<Product>()
         if (cursor.moveToFirst()){
             do{
                 result.add(cursor.getProduto())
@@ -37,15 +37,15 @@ class ProdutoDAO(val dbHelper: DBHelper) {
     }
 
 
-    private fun Cursor.getProduto():Produto{
-        return Produto(
+    private fun Cursor.getProduto(): Product {
+        return Product(
                 getLong(PRODUTO_ID_COLUMN),
                 getDouble(PRODUTO_PRECO_COLUMN),
                 getString(PRODUTO_NOME_COLUMN)
         )
     }
 
-    private fun Produto.toContentValues():ContentValues{
+    private fun Product.toContentValues():ContentValues{
         val values = ContentValues()
         if(this.id>-1)values.put(PRODUTO_ID_COLUMN,this.id)
         values.put(PRODUTO_NOME_COLUMN,this.nome)

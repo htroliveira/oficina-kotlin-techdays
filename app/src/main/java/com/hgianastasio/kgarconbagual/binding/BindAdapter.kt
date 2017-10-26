@@ -10,8 +10,8 @@ import com.hgianastasio.kgarconbagual.binding.model.Mask
 
 object BindAdapter {
 
-    @BindingAdapter("android:mask")
     @JvmStatic
+    @BindingAdapter("android:mask")
     fun setMask(editText: EditText, mask: String) {
         editText.addTextChangedListener(Mask.insert(mask, editText))
     }
