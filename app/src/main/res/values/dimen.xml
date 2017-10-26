@@ -3,6 +3,8 @@
     <dimen name="padding_default">16dp</dimen>
     <dimen name="padding_item_product">8dp</dimen>
     <dimen name="height_item_product">70dp</dimen>
+    <dimen name="margin_items_add_product">30dp</dimen>
+    <dimen name="default_elevation">30dp</dimen>
 
 
 

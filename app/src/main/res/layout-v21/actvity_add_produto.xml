@@ -25,12 +25,12 @@
             android:hint="@string/hint_zero"
             android:textSize="@dimen/size_large" />
 
-
         <Button
             android:id="@+id/btnSalvar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/etPreco"
+            android:elevation="@dimen/default_elevation"
             android:text="@string/save" />
     </RelativeLayout>
 </layout>
