@@ -1,4 +1,4 @@
-package com.hgianastasio.kgarconbagual.view
+package com.hgianastasio.kgarconbagual.view.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,14 +8,14 @@ import android.widget.BaseAdapter
 import android.widget.NumberPicker
 import android.widget.TextView
 import com.hgianastasio.kgarconbagual.R
-import com.hgianastasio.kgarconbagual.data.models.Produto
+import com.hgianastasio.kgarconbagual.model.Product
 
 /**
  * Created by heitorgianastasio on 16/10/17.
  */
-class ProdutoAdapter(
-         val list: List<Produto>,
-         val context: Context
+class ProductAdapter(
+        val list: List<Product>,
+        val context: Context
 ) : BaseAdapter(){
     val qtdMap = mutableMapOf<Long,Int>()
 

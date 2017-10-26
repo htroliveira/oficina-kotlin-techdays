@@ -20,7 +20,7 @@
 
         <activity android:name=".view.MainActivity"/>
 
-        <activity android:name=".view.AddProdutoActivity"/>
+        <activity android:name=".view.AddProductActivity"/>
 
         <activity android:name=".view.FinalizeActivity"/>
 

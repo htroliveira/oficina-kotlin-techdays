@@ -21,7 +21,7 @@ android {
         }
     }
     dexOptions {
-        incremental false
+        incremental true
     }
     dataBinding {
         enabled = true
